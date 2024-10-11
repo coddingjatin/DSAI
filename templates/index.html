@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Complaint Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Complaint Classification</h1>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="complaint">Enter Complaint:</label>
+                <input type="text" id="complaint" name="complaint" placeholder="Type your complaint here..." required>
+            </div>
+            <div class="form-group">
+                <label for="model_choice">Select Model:</label>
+                <select id="model_choice" name="model_choice">
+                    <option value="Logistic Regression">Logistic Regression</option>
+                    <option value="Random Forest">Random Forest</option>
+                </select>
+            </div>
+            <input type="submit" value="Classify Complaint">
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

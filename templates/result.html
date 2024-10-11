@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Result</h1>
+        <p><strong>Complaint:</strong> {{ complaint }}</p>
+        <p><strong>Predicted Category:</strong> {{ category }}</p>
+        <a href="/">Classify another complaint</a>
+    </div>
+</body>
+</html>
