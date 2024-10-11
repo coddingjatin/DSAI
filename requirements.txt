@@ -39,7 +39,7 @@ executing==2.0.1
 faiss-cpu==1.8.0
 fastapi==0.109.2
 filelock==3.13.1
-Flask==3.0.2
+Flask
 Flask-Cors==4.0.1
 Flask-Session==0.3.2
 Flask-SocketIO==4.3.1
