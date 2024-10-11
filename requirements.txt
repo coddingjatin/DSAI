@@ -86,7 +86,7 @@ jupyter_core==5.7.1
 kubernetes==29.0.0
 langchain==0.1.4
 langchain-community==0.0.20
-langchain-core==0.1.23
+langchain-core
 langchain-google-genai==1.0.1
 langchain-text-splitters==0.0.1
 langsmith==0.0.87
